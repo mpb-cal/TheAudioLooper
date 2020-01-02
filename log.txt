@@ -1,5 +1,0 @@
-cmd line: C:\Twister.wav
-Initialized COM
-registering main window class
-Creating main window
-PlayMovieInWindow()
