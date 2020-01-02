@@ -1,0 +1,280 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+//#include "main.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open clip...",               ID_FILE_OPENCLIP
+        MENUITEM "&Close clip",                 ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Control"
+    BEGIN
+        MENUITEM "&Pause/Play\tP",              ID_FILE_PAUSE
+        MENUITEM "&Stop\tS",                    ID_FILE_STOP
+        MENUITEM "&Mute/Unmute\tM",             ID_FILE_MUTE
+        MENUITEM SEPARATOR
+        MENUITEM "Single F&rame Step\t<Space>", ID_SINGLE_STEP
+        MENUITEM SEPARATOR
+        MENUITEM "&Half size (50%)\tH",         ID_FILE_SIZE_HALF
+        MENUITEM "&Three-quarter size (75%)\tT", ID_FILE_SIZE_THREEQUARTER
+        MENUITEM "&Normal size (100%)\tN",      ID_FILE_SIZE_NORMAL, CHECKED
+        MENUITEM "&Double size (200%)\tD",      ID_FILE_SIZE_DOUBLE
+        MENUITEM SEPARATOR
+        MENUITEM "&Full Screen\t<Enter> or F",  ID_FILE_FULLSCREEN
+        MENUITEM SEPARATOR
+        MENUITEM "&In/Out",                     ID_CONTROL_INOUT
+    END
+    POPUP "&Rate"
+    BEGIN
+        MENUITEM "&Increase Playback Rate\t<Right arrow>", ID_RATE_INCREASE
+        MENUITEM "&Decrease Playback Rate\t<Left arrow>", ID_RATE_DECREASE
+        MENUITEM SEPARATOR
+        MENUITEM "&Normal Playback Rate\t<Down arrow>", ID_RATE_NORMAL
+        MENUITEM "&Half Playback Rate",         ID_RATE_HALF
+        MENUITEM "Dou&ble Playback Rate",       ID_RATE_DOUBLE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAINICON            ICON    DISCARDABLE     "TheAudioLooper.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 228, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About The Audio Looper"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "The Audio Looper",-1,11,10,131,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 1999-2001 Marc P. Bernasconi",-1,11,34,
+                    188,8
+    DEFPUSHBUTTON   "OK",IDOK,171,7,50,14,WS_GROUP
+    LTEXT           "Version 1.0",-1,11,22,119,8,SS_NOPREFIX
+END
+
+IDD_INOUT DIALOG DISCARDABLE  0, 0, 544, 255
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "In/Out"
+FONT 8, "MS Sans Serif"
+BEGIN
+    SCROLLBAR       IDC_SCROLLBAR1,13,12,514,11
+    PUSHBUTTON      "<<",IDC_BUTTON_REWIND_ALL,85,38,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_REWIND,105,38,15,14
+    PUSHBUTTON      "&Pause",IDC_BUTTON_PLAY,125,38,30,14
+    PUSHBUTTON      ">",IDC_BUTTON_FORWARD,157,38,15,14
+    CONTROL         "&Loop",IDC_CHECK_LOOP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,40,32,10
+    CONTROL         "&Gap",IDC_CHECK_GAP,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,225,40,29,10
+    CTEXT           "Static",IDC_STATIC_CURRENT,265,39,42,12,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    PUSHBUTTON      "Hit",IDC_BUTTON_HIT,317,33,32,24
+    PUSHBUTTON      "&Now",IDC_BUTTON_SETSTART,39,86,31,30
+    PUSHBUTTON      "&Beginning",IDC_BUTTON_BEGINNING,78,86,53,30
+    PUSHBUTTON      "No&w",IDC_BUTTON_SETSTOP,39,129,31,30
+    PUSHBUTTON      "En&d",IDC_BUTTON_END,78,129,53,30
+    PUSHBUTTON      "<",IDC_BUTTON_STARTLEFT,163,92,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_STARTRIGHT,183,92,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_STARTLEFT3,211,92,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_STARTRIGHT3,231,92,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_STARTLEFT2,259,92,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_STARTRIGHT2,279,92,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_STOPLEFT,163,148,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_STOPRIGHT,183,148,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_STOPLEFT3,211,148,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_STOPRIGHT3,231,148,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_STOPLEFT2,259,148,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_STOPRIGHT2,279,148,15,14
+    CTEXT           "Static",IDC_STATIC_LENGTHINBEATS,23,202,42,12,
+                    SS_CENTERIMAGE | SS_SUNKEN
+    PUSHBUTTON      "<",IDC_BUTTON_LENGTHLEFT,91,200,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_LENGTHRIGHT,111,200,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_BOTHLEFT,163,202,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_BOTHRIGHT,184,202,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_BOTHLEFT3,212,202,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_BOTHRIGHT3,232,202,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_BOTHLEFT2,260,202,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_BOTHRIGHT2,280,202,15,14
+    PUSHBUTTON      "<",IDC_BUTTON_BOTHLEFT_LENGTH,313,202,15,14
+    PUSHBUTTON      ">",IDC_BUTTON_BOTHRIGHT_LENGTH,333,202,15,14
+    PUSHBUTTON      "&- 25%",IDC_BUTTON_SLOWER,399,47,24,14
+    PUSHBUTTON      "&+ 25%",IDC_BUTTON_FASTER,469,47,24,14
+    PUSHBUTTON      "- 1%",IDC_BUTTON_SLOWER2,399,66,24,14
+    PUSHBUTTON      "+ 1%",IDC_BUTTON_FASTER2,469,66,24,14
+    PUSHBUTTON      "&First Tap",IDC_BUTTON_FIRSTTAP,393,115,50,14
+    PUSHBUTTON      "&Tap",IDC_BUTTON_TAP,393,134,50,14,WS_DISABLED
+    PUSHBUTTON      "&Last Tap",IDC_BUTTON_LASTTAP,393,153,50,14,WS_DISABLED
+    EDITTEXT        IDC_EDIT_TEMPO,470,200,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set",IDC_BUTTON_TEMPO_SET,470,218,40,14
+    LTEXT           "&Start: ",IDC_STATIC,15,95,20,8
+    LTEXT           "St&op: ",IDC_STATIC,14,140,20,8
+    LTEXT           "1 sec.",IDC_STATIC,171,82,20,8
+    LTEXT           ".01 sec.",IDC_STATIC,265,82,30,8
+    CTEXT           "Static",IDC_STATIC_SPEED,430,55,31,18,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    LTEXT           ".1 sec.",IDC_STATIC,217,82,30,8
+    CTEXT           "Static",IDC_STATIC_TEMPO,459,112,57,19,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    GROUPBOX        "Tempo Calculator",IDC_STATIC,387,93,140,87
+    GROUPBOX        "Playback Speed",IDC_STATIC,387,31,115,56
+    LTEXT           "Seconds Per Beat:",IDC_STATIC,458,99,60,8
+    LTEXT           "Length",IDC_STATIC,318,191,23,8
+    CTEXT           "Static",IDC_STATIC_BPM,459,152,57,19,SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    LTEXT           "Beats Per Minute:",IDC_STATIC,459,139,57,8
+    LTEXT           "Beats",IDC_STATIC,67,203,19,8
+    GROUPBOX        "Manual Tempo Entry",IDC_STATIC,387,187,140,53
+    LTEXT           "Beats Per Minute:",IDC_STATIC,401,202,57,8
+    LTEXT           "1 sec.",IDC_STATIC,174,191,20,8
+    LTEXT           ".1 sec.",IDC_STATIC,218,191,30,8
+    LTEXT           ".01 sec.",IDC_STATIC,263,191,30,8
+    GROUPBOX        "Set Start and Stop Points",IDC_STATIC,13,70,127,97
+    GROUPBOX        "Move Start Point",IDC_STATIC,154,70,152,40
+    GROUPBOX        "Move Stop Point",IDC_STATIC,154,123,152,44
+    GROUPBOX        "Move Start and Stop Points",IDC_STATIC,154,181,206,44
+    LTEXT           "1 sec.",IDC_STATIC,169,135,20,8
+    LTEXT           ".01 sec.",IDC_STATIC,263,135,30,8
+    LTEXT           ".1 sec.",IDC_STATIC,215,135,30,8
+    GROUPBOX        "Set Selection Length",IDC_STATIC,13,185,127,40
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 8,1,0,0
+ PRODUCTVERSION 8,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        VALUE "040904b0", "\0"
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""main.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_INOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 13
+        RIGHTMARGIN, 527
+        TOPMARGIN, 12
+        BOTTOMMARGIN, 240
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
